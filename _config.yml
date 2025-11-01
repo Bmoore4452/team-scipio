@@ -1,0 +1,9 @@
+# Team Scipio Website Configuration
+title: Team Scipio
+description: Official website of Team Scipio, author of Hip-Hop Time Capsule
+author: Team Scipio
+
+# GitHub Pages settings
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-seo-tag
