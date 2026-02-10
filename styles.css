@@ -255,6 +255,11 @@ html {
   text-transform: uppercase;
 }
 
+.availability-badge a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .availability-badge:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(90, 42, 253, 0.5);

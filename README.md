@@ -119,6 +119,89 @@ In the "Gallery Section" of `index.html`, duplicate this code block:
    - Click "Save"
    - Your site will be live at: `https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/`
 
+## 📤 Usage: Updating the Website
+
+After making changes to the website, follow these steps to publish updates:
+
+### Quick Update (Most Common)
+
+```bash
+# Stage all changes
+git add .
+
+# Commit with a descriptive message
+git commit -m "Update: description of changes"
+
+# Push to GitHub (automatically updates the live site)
+git push
+```
+
+### Detailed Workflow
+
+1. **Check current status** (see what files have changed):
+
+   ```bash
+   git status
+   ```
+
+2. **Stage specific files** (or use `git add .` for all):
+
+   ```bash
+   git add index.html styles.css images/gallery/new-photo.jpg
+   ```
+
+3. **Commit your changes**:
+
+   ```bash
+   git commit -m "Add new gallery photos and update styles"
+   ```
+
+4. **Push to GitHub Pages**:
+
+   ```bash
+   git push origin main
+   ```
+
+5. **Verify deployment**:
+   - GitHub Pages typically updates within 1-2 minutes
+   - Check the Actions tab on GitHub for deployment status
+   - Visit your live site to confirm changes
+
+### Using GitHub CLI (gh)
+
+If you have the [GitHub CLI](https://cli.github.com/) installed:
+
+```bash
+# Check repository status
+gh repo view --web
+
+# View recent deployments
+gh run list --workflow=pages-build-deployment
+
+# Watch deployment progress
+gh run watch
+
+# Open the live site
+gh browse
+```
+
+### Useful Git Commands
+
+| Command                | Description                          |
+| ---------------------- | ------------------------------------ |
+| `git status`           | See changed files                    |
+| `git diff`             | View specific changes                |
+| `git log --oneline -5` | View last 5 commits                  |
+| `git pull`             | Get latest changes from GitHub       |
+| `git stash`            | Temporarily save uncommitted changes |
+| `git stash pop`        | Restore stashed changes              |
+
+### Troubleshooting
+
+- **Changes not appearing?** Wait 1-2 minutes, then hard refresh (`Cmd+Shift+R` on Mac)
+- **Deployment failed?** Check the Actions tab on GitHub for error details
+- **Merge conflicts?** Run `git pull` before making changes
+
 ## 🔧 Local Development
 
 To view the website locally:
